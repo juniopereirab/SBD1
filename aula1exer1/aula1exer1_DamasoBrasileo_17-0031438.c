@@ -10,7 +10,6 @@ typedef struct {
 } Automovel;
 
 typedef struct {
-    int id;
     char nome[30];
     char cpf[11];
     int num_carros;
@@ -45,7 +44,6 @@ int main() {
                 printf("Numeros de pessoas para serem cadastradas: \n");
                 scanf("%d", &num_pessoas);
                 for(int k = 0; k < num_pessoas; k++){
-                    pessoa.id = k;
                     arqPessoas = fopen("base_pessoas.txt", "a");
                     arqCarros = fopen("base_carros.txt", "a");
 
@@ -80,7 +78,7 @@ int main() {
                 printf("Pessoas cadastradas: \n");
                 while(fread(&pessoa, sizeof(Pessoa), 1, arqPessoas)){
                     printf("**********************\n");
-                    printf("ID: %d - Nome: %s - CPF: %s\nCarros:\n", pessoa.id, pessoa.nome, pessoa.cpf);
+                    printf("Nome: %s - CPF: %s\nCarros:\n", pessoa.nome, pessoa.cpf);
                     for(int j = 0; j < pessoa.num_carros; j++){
                         printf("-> %s\n", pessoa.carros[j]);
                     }

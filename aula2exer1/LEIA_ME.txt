@@ -1,0 +1,22 @@
+Para compilar o código foi utilizado a linha de comando: 
+
+gcc -o prog aula2exer1_DamasoBrasileo_17-0031438.c 
+
+Existem 3 opções possíveis dentro do programa: 
+1 - Cadastrar novas pessoas e automóveis (carros).
+2 - Listar pessoas e carros cadastrados
+3 - Sair
+
+
+Ao cadastrar pessoas, todas elas são salvas em um arquivo chamado "base_pessoas.txt".
+Ao cadastrar carros, todos eles são salvos em um arquivo chamado "base_carros.txt".
+
+Esses arquivos são criados automaticamente, na pasta raíz na qual o código foi compilado.
+E a listagem acontece também a partir desses arquivos.
+
+MUDANÇA EM RELAÇÂO A PRIMEIRA VERSÃO:
+
+- Cada usuário pode conter apenas 1 CPF único, com 11 digitos.
+- Não é mais possível cadastrar 2 pessoas com o mesmo CPF.
+- Os usuários são listados por ordem crescente do número do CPF ou por ordem alfabetica do nome.
+- Não é mais possível cadastrar pessoas sem carros.
